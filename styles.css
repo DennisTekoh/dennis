@@ -124,6 +124,27 @@ a {
   white-space: nowrap;
 }
 
+.language-switch {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 0.74rem;
+  font-weight: 900;
+}
+
+.language-switch a {
+  border-radius: 3px;
+  padding: 7px 8px;
+  text-decoration: none;
+}
+
+.language-switch a:hover,
+.language-switch a[aria-current="page"] {
+  background: rgba(201, 145, 37, 0.18);
+  color: var(--gold-soft);
+}
+
 .hero {
   position: relative;
   display: grid;
@@ -722,6 +743,15 @@ textarea {
 
   .header-button {
     margin-left: auto;
+  }
+
+  .language-switch {
+    order: 2;
+    margin-left: auto;
+  }
+
+  .header-button {
+    order: 2;
   }
 
   .hero {
