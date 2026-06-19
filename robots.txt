@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://heymrzak.github.io/dennis/sitemap.xml

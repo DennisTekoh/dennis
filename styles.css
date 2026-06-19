@@ -44,6 +44,33 @@ a {
   color: inherit;
 }
 
+.skip-link {
+  position: fixed;
+  top: 12px;
+  left: 12px;
+  z-index: 50;
+  transform: translateY(-140%);
+  border-radius: 5px;
+  background: var(--gold);
+  color: var(--white);
+  font-weight: 800;
+  padding: 10px 14px;
+  text-decoration: none;
+}
+
+.skip-link:focus {
+  transform: translateY(0);
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 3px solid var(--gold-soft);
+  outline-offset: 3px;
+}
+
 .site-header {
   position: sticky;
   top: 0;
@@ -521,6 +548,8 @@ button:hover,
   border-radius: 8px;
   background: rgba(255, 255, 255, 0.76);
   padding: 16px;
+  display: grid;
+  align-content: start;
 }
 
 .resource-image {
@@ -551,6 +580,7 @@ button:hover,
   background: var(--gold);
   color: var(--white);
   padding: 0 16px;
+  width: fit-content;
 }
 
 .booking-card {
@@ -708,6 +738,7 @@ textarea {
     justify-content: flex-start;
     overflow-x: auto;
     padding-bottom: 4px;
+    scrollbar-width: thin;
   }
 
   .nav a::after {
@@ -745,20 +776,34 @@ textarea {
 
 @media (max-width: 720px) {
   .site-header {
+    gap: 12px;
     padding: 12px 22px;
   }
 
   .brand {
     min-width: 0;
+    max-width: 160px;
+  }
+
+  .brand__script {
+    font-size: 1.55rem;
+  }
+
+  .brand__tag {
+    font-size: 0.55rem;
   }
 
   .header-button {
-    margin-left: auto;
+    min-height: 40px;
+    font-size: 0.68rem;
+    margin-left: 0;
+    padding: 0 12px;
   }
 
   .language-switch {
     order: 2;
     margin-left: auto;
+    font-size: 0.68rem;
   }
 
   .header-button {
@@ -768,6 +813,20 @@ textarea {
   .hero {
     min-height: auto;
     padding: 58px 22px;
+  }
+
+  h1 {
+    font-size: clamp(2.8rem, 18vw, 4.1rem);
+  }
+
+  h2 {
+    font-size: clamp(1.85rem, 12vw, 2.5rem);
+  }
+
+  .hero__actions .button,
+  .button,
+  button {
+    width: 100%;
   }
 
   .hero__badges,
@@ -800,5 +859,21 @@ textarea {
 
   .footer {
     padding: 42px 22px;
+  }
+}
+
+@media (max-width: 420px) {
+  .site-header {
+    align-items: flex-start;
+  }
+
+  .language-switch {
+    flex-basis: 100%;
+    justify-content: flex-start;
+    margin-left: 0;
+  }
+
+  .header-button {
+    width: 100%;
   }
 }

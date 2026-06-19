@@ -3,10 +3,28 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self'; form-action 'self'; base-uri 'self'; frame-ancestors 'none'; upgrade-insecure-requests" />
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
+    <meta name="robots" content="index, follow, max-image-preview:large" />
+    <meta name="theme-color" content="#061b2f" />
     <meta
       name="description"
       content="Dennis Consulting Solutions helps people transform their lives through books, coaching, sleep reset programs, marriage counseling, and responsible lottery mindset guidance."
     />
+    <link rel="canonical" href="https://heymrzak.github.io/dennis/" />
+    <link rel="alternate" hreflang="en" href="https://heymrzak.github.io/dennis/?lang=en" />
+    <link rel="alternate" hreflang="es" href="https://heymrzak.github.io/dennis/?lang=es" />
+    <link rel="alternate" hreflang="fr" href="https://heymrzak.github.io/dennis/?lang=fr" />
+    <link rel="alternate" hreflang="x-default" href="https://heymrzak.github.io/dennis/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://heymrzak.github.io/dennis/" />
+    <meta property="og:title" content="Dennis Consulting Solutions" />
+    <meta property="og:description" content="Books, coaching, sleep reset programs, marriage counseling, and responsible lottery mindset guidance." />
+    <meta property="og:image" content="https://heymrzak.github.io/dennis/assets/images/dennis-portrait.jpg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Dennis Consulting Solutions" />
+    <meta name="twitter:description" content="Books, coaching, sleep reset programs, marriage counseling, and responsible lottery mindset guidance." />
+    <meta name="twitter:image" content="https://heymrzak.github.io/dennis/assets/images/dennis-portrait.jpg" />
     <title>Dennis Consulting Solutions</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -15,140 +33,118 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./styles.css" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "ProfessionalService",
+        "name": "Dennis Consulting Solutions",
+        "url": "https://heymrzak.github.io/dennis/",
+        "image": "https://heymrzak.github.io/dennis/assets/images/dennis-portrait.jpg",
+        "email": "info@dennisconsulting.solutions",
+        "telephone": "+34631319742",
+        "founder": {
+          "@type": "Person",
+          "name": "Dennis Agwe",
+          "jobTitle": "Author, Coach and Counselor"
+        },
+        "areaServed": "Worldwide",
+        "serviceType": ["Coaching", "Sleep Reset Program", "Marriage Counseling", "Book Store"]
+      }
+    </script>
   </head>
   <body>
+    <a class="skip-link" href="#main" data-i18n="skip">Skip to content</a>
     <header class="site-header">
       <a class="brand" href="#home" aria-label="Dennis Consulting Solutions home">
         <span class="brand__script">Dennis</span>
         <span class="brand__tag">Consulting Solutions</span>
       </a>
       <nav class="nav" aria-label="Main navigation">
-        <a href="#book-store">Book Store</a>
-        <a href="#sleep-reset">Sleep Reset</a>
-        <a href="#marriage">Marriage</a>
-        <a href="#lottery">Lottery Corner</a>
-        <a href="#about">About</a>
-        <a href="#contact">Contact</a>
+        <a href="#book-store" data-i18n="navBook">Book Store</a>
+        <a href="#sleep-reset" data-i18n="navSleep">Sleep Reset</a>
+        <a href="#marriage" data-i18n="navMarriage">Marriage</a>
+        <a href="#lottery" data-i18n="navLottery">Lottery Corner</a>
+        <a href="#about" data-i18n="navAbout">About</a>
+        <a href="#contact" data-i18n="navContact">Contact</a>
       </nav>
       <div class="language-switch" aria-label="Language selector">
-        <a href="./" aria-current="page">ENG</a>
-        <a href="#contact">ESP</a>
-        <a href="#contact">FR</a>
+        <a href="?lang=en" data-lang="en" aria-current="page">ENG</a>
+        <a href="?lang=es" data-lang="es">ESP</a>
+        <a href="?lang=fr" data-lang="fr">FR</a>
       </div>
-      <a class="header-button" href="#contact">Book a Session</a>
+      <a class="header-button" href="#contact" data-i18n="bookSession">Book a Session</a>
     </header>
 
-    <main id="home">
-      <section class="hero">
+    <main id="main">
+      <section class="hero" id="home">
         <div class="hero__shade"></div>
         <div class="hero__content">
-          <p class="eyebrow">Author | Coach | Counselor</p>
-          <h1>Inspiring Better Lives Every Day</h1>
-          <p class="hero__text">
+          <p class="eyebrow" data-i18n="heroEyebrow">Author | Coach | Counselor</p>
+          <h1 data-i18n="heroTitle">Inspiring Better Lives Every Day</h1>
+          <p class="hero__text" data-i18n="heroText">
             Through books, programs and counseling, Dennis Consulting Solutions helps people
             transform their mindset, improve relationships, sleep better and live with purpose.
           </p>
           <div class="hero__badges" aria-label="Service highlights">
-            <span>Author</span>
-            <span>Sleep Coach</span>
-            <span>Marriage Counselor</span>
-            <span>Lottery Mindset Coach</span>
+            <span data-i18n="badgeAuthor">Author</span>
+            <span data-i18n="badgeSleep">Sleep Coach</span>
+            <span data-i18n="badgeMarriage">Marriage Counselor</span>
+            <span data-i18n="badgeLottery">Lottery Mindset Coach</span>
           </div>
           <div class="hero__actions">
-            <a class="button button--gold" href="https://pay.sumup.com/b2c/X8F90U7T0Y">Buy My Book</a>
-            <a class="button button--green" href="#sleep-reset">Sleep Reset Program</a>
-            <a class="button button--blue" href="#contact">Book a Session</a>
+            <a class="button button--gold" href="https://pay.sumup.com/b2c/X8F90U7T0Y" target="_blank" rel="noopener noreferrer" data-i18n="buyBook">Buy My Book</a>
+            <a class="button button--green" href="#sleep-reset" data-i18n="sleepProgram">Sleep Reset Program</a>
+            <a class="button button--blue" href="#contact" data-i18n="bookSession">Book a Session</a>
           </div>
         </div>
         <figure class="hero__photo">
-          <img src="./assets/images/dennis-portrait.jpg" alt="Dennis Agwe portrait" />
+          <img src="./assets/images/dennis-portrait.jpg" alt="Dennis Agwe portrait" width="1440" height="960" fetchpriority="high" />
         </figure>
       </section>
 
       <section class="section section--light" id="services">
         <div class="section-heading">
-          <h2>What I Do</h2>
+          <h2 data-i18n="whatIDo">What I Do</h2>
           <span></span>
         </div>
         <div class="service-grid">
           <article class="service-card" id="book-store">
-            <img
-              class="service-card__image"
-              src="./assets/images/kingdom-english.jpg"
-              alt="Kingdom Principles for Proper Living book cover"
-            />
+            <img class="service-card__image" src="./assets/images/kingdom-english.jpg" alt="Kingdom Principles for Proper Living book cover" width="1600" height="1200" loading="lazy" />
             <div class="service-card__body">
-              <h3>Book Store</h3>
-              <p>
-                Get your copy of my book "Kingdom Principles For Proper Living" and start living a
-                purposeful life.
-              </p>
-              <p>
-                Discover "Principios del Reino para una Vida Adecuada", a practical guide that
-                helps readers develop purpose, strengthen character, and apply timeless principles
-                for a meaningful and successful life.
-              </p>
-              <a href="https://pay.sumup.com/b2c/X8F90U7T0Y">Buy Book</a>
+              <h3 data-i18n="bookStoreTitle">Book Store</h3>
+              <p data-i18n="bookStoreText1">Get your copy of my book "Kingdom Principles For Proper Living" and start living a purposeful life.</p>
+              <p data-i18n="bookStoreText2">Discover "Principios del Reino para una Vida Adecuada", a practical guide that helps readers develop purpose, strengthen character, and apply timeless principles for a meaningful and successful life.</p>
+              <a href="https://pay.sumup.com/b2c/X8F90U7T0Y" target="_blank" rel="noopener noreferrer" data-i18n="buyBookShort">Buy Book</a>
             </div>
           </article>
 
           <article class="service-card" id="sleep-reset">
-            <img
-              class="service-card__image"
-              src="./assets/images/sleep-reset-box.jpg"
-              alt="60-Second Sleep Reset program box"
-            />
+            <img class="service-card__image" src="./assets/images/sleep-reset-box.jpg" alt="60-Second Sleep Reset program box" width="1070" height="1374" loading="lazy" />
             <div class="service-card__body">
-              <h3>Sleep Reset Program</h3>
-              <p>
-                A step-by-step program to help you improve your sleep, reset your body and wake up
-                with energy and clarity.
-              </p>
-              <p>
-                A simple and effective program for all ages designed to improve sleep quality,
-                restore energy, reduce stress, enhance focus, and help you wake up refreshed.
-              </p>
-              <a href="#programs">Learn More</a>
+              <h3 data-i18n="sleepTitle">Sleep Reset Program</h3>
+              <p data-i18n="sleepText1">A step-by-step program to help you improve your sleep, reset your body and wake up with energy and clarity.</p>
+              <p data-i18n="sleepText2">A simple and effective program for all ages designed to improve sleep quality, restore energy, reduce stress, enhance focus, and help you wake up refreshed.</p>
+              <a href="#programs" data-i18n="learnMore">Learn More</a>
             </div>
           </article>
 
           <article class="service-card" id="marriage">
-            <img
-              class="service-card__image"
-              src="./assets/images/dennis-portrait.jpg"
-              alt="Dennis Agwe coaching and counseling"
-            />
+            <img class="service-card__image" src="./assets/images/dennis-portrait.jpg" alt="Dennis Agwe coaching and counseling" width="1440" height="960" loading="lazy" />
             <div class="service-card__body">
-              <h3>Marriage Counseling</h3>
-              <p>
-                Strengthen your relationship, resolve conflicts and build a lasting marriage with
-                expert guidance.
-              </p>
-              <p>
-                We help couples build stronger, happier, and more fulfilling marriages through
-                practical guidance, proven relationship principles, personal experience, and study.
-              </p>
-              <a href="#contact">Learn More</a>
+              <h3 data-i18n="marriageTitle">Marriage Counseling</h3>
+              <p data-i18n="marriageText1">Strengthen your relationship, resolve conflicts and build a lasting marriage with expert guidance.</p>
+              <p data-i18n="marriageText2">We help couples build stronger, happier, and more fulfilling marriages through practical guidance, proven relationship principles, personal experience, and study.</p>
+              <a href="#contact" data-i18n="learnMore">Learn More</a>
             </div>
           </article>
 
           <article class="service-card" id="lottery">
-            <img
-              class="service-card__image"
-              src="./assets/images/euro-jackpot.jpg"
-              alt="Euro jackpot lottery balls"
-            />
+            <img class="service-card__image" src="./assets/images/euro-jackpot.jpg" alt="Euro jackpot lottery balls" width="1455" height="970" loading="lazy" />
             <div class="service-card__body">
-              <h3>Lottery Corner</h3>
-              <p>
-                Mindset coaching, strategies, lottery education, results, statistics and responsible
-                lottery play.
-              </p>
-              <p>
-                Receive smart guidance on when and how to play responsibly, with practical insights,
-                strategies, and analysis to help you make informed decisions.
-              </p>
-              <a href="#lottery-corner">Learn More</a>
+              <h3 data-i18n="lotteryTitle">Lottery Corner</h3>
+              <p data-i18n="lotteryText1">Mindset coaching, strategies, lottery education, results, statistics and responsible lottery play.</p>
+              <p data-i18n="lotteryText2">Receive smart guidance on when and how to play responsibly, with practical insights, strategies, and analysis to help you make informed decisions.</p>
+              <a href="#lottery-corner" data-i18n="learnMore">Learn More</a>
             </div>
           </article>
         </div>
@@ -156,65 +152,39 @@
 
       <section class="about" id="about">
         <figure class="about__photo">
-          <img src="./assets/images/dennis-portrait.jpg" alt="Dennis Agwe" />
+          <img src="./assets/images/dennis-portrait.jpg" alt="Dennis Agwe" width="1440" height="960" loading="lazy" />
         </figure>
         <div class="about__content">
-          <p class="eyebrow">About Dennis Agwe</p>
-          <h2>Author, Coach and Counselor</h2>
-          <p>
-            I am an author, coach and counselor with a passion for helping people transform their
-            lives. With years of experience in personal development, sleep science, relationship
-            counseling and mindset coaching, I created programs and services that bring practical
-            solutions to everyday challenges.
-          </p>
+          <p class="eyebrow" data-i18n="aboutEyebrow">About Dennis Agwe</p>
+          <h2 data-i18n="aboutTitle">Author, Coach and Counselor</h2>
+          <p data-i18n="aboutText">I am an author, coach and counselor with a passion for helping people transform their lives. With years of experience in personal development, sleep science, relationship counseling and mindset coaching, I created programs and services that bring practical solutions to everyday challenges.</p>
           <div class="stats">
-            <div>
-              <strong>Author</strong>
-              <span>Books Published</span>
-            </div>
-            <div>
-              <strong>Coach</strong>
-              <span>Personal Growth</span>
-            </div>
-            <div>
-              <strong>Counselor</strong>
-              <span>Relationships</span>
-            </div>
+            <div><strong data-i18n="statAuthor">Author</strong><span data-i18n="statAuthorText">Books Published</span></div>
+            <div><strong data-i18n="statCoach">Coach</strong><span data-i18n="statCoachText">Personal Growth</span></div>
+            <div><strong data-i18n="statCounselor">Counselor</strong><span data-i18n="statCounselorText">Relationships</span></div>
           </div>
-          <a class="button button--gold" href="#contact">Book a Session</a>
+          <a class="button button--gold" href="#contact" data-i18n="bookSession">Book a Session</a>
         </div>
       </section>
 
       <section class="section section--light books" id="books">
         <div class="section-heading">
-          <h2>Book Store</h2>
+          <h2 data-i18n="bookStoreTitle">Book Store</h2>
           <span></span>
         </div>
         <div class="book-showcase">
           <figure>
-            <img
-              src="./assets/images/kingdom-english.jpg"
-              alt="Kingdom Principles for Proper Living English cover"
-            />
+            <img src="./assets/images/kingdom-english.jpg" alt="Kingdom Principles for Proper Living English cover" width="1600" height="1200" loading="lazy" />
           </figure>
           <div>
-            <p class="eyebrow">Kingdom Principles</p>
-            <h2>For Proper Living</h2>
-            <p>
-              A practical guide for purpose, character, success, and meaningful living. Available in
-              English and Spanish editions.
-            </p>
+            <p class="eyebrow" data-i18n="kingdomEyebrow">Kingdom Principles</p>
+            <h2 data-i18n="kingdomTitle">For Proper Living</h2>
+            <p data-i18n="kingdomText">A practical guide for purpose, character, success, and meaningful living. Available in English and Spanish editions.</p>
             <div class="mini-gallery">
-              <img
-                src="./assets/images/kingdom-spanish-front.jpg"
-                alt="Principios del Reino para una Vida Adecuada front cover"
-              />
-              <img
-                src="./assets/images/kingdom-spanish-back.jpg"
-                alt="Principios del Reino para una Vida Adecuada back cover"
-              />
+              <img src="./assets/images/kingdom-spanish-front.jpg" alt="Principios del Reino para una Vida Adecuada front cover" width="1600" height="1600" loading="lazy" />
+              <img src="./assets/images/kingdom-spanish-back.jpg" alt="Principios del Reino para una Vida Adecuada back cover" width="1600" height="1600" loading="lazy" />
             </div>
-            <a class="button button--gold" href="https://pay.sumup.com/b2c/X8F90U7T0Y">Buy Book</a>
+            <a class="button button--gold" href="https://pay.sumup.com/b2c/X8F90U7T0Y" target="_blank" rel="noopener noreferrer" data-i18n="buyBookShort">Buy Book</a>
           </div>
         </div>
       </section>
@@ -222,74 +192,71 @@
       <section class="section section--soft" id="programs">
         <div class="programs-layout">
           <div>
-            <h2>60-Second Reset Programs</h2>
+            <h2 data-i18n="resetPrograms">60-Second Reset Programs</h2>
             <div class="resource-grid">
               <article>
-                <img class="resource-image" src="./assets/images/sleep-reset-box.jpg" alt="" />
-                <h3>Sleep Reset</h3>
-                <p>Stop overthinking, calm anxiety and fall asleep fast tonight.</p>
+                <img class="resource-image" src="./assets/images/sleep-reset-box.jpg" alt="60-Second Sleep Reset program" width="1070" height="1374" loading="lazy" />
+                <h3 data-i18n="programSleep">Sleep Reset</h3>
+                <p data-i18n="programSleepText">Stop overthinking, calm anxiety and fall asleep fast tonight.</p>
               </article>
               <article>
-                <img class="resource-image" src="./assets/images/burnout-reset.jpg" alt="" />
-                <h3>Burnout Reset</h3>
-                <p>Reset stress, restore energy and recover from burnout fast.</p>
-                <a class="buy-link" href="https://pay.sumup.com/b2c/XKK93SGQPZ">Buy Program</a>
+                <img class="resource-image" src="./assets/images/burnout-reset.jpg" alt="60-Second Burnout Reset program" width="1024" height="1536" loading="lazy" />
+                <h3 data-i18n="programBurnout">Burnout Reset</h3>
+                <p data-i18n="programBurnoutText">Reset stress, restore energy and recover from burnout fast.</p>
+                <a class="buy-link" href="https://pay.sumup.com/b2c/XKK93SGQPZ" target="_blank" rel="noopener noreferrer" data-i18n="buyProgram">Buy Program</a>
               </article>
               <article>
-                <img class="resource-image" src="./assets/images/menopause-reset.jpg" alt="" />
-                <h3>Menopause Reset</h3>
-                <p>Ease stress, calm overwhelm and feel balanced again.</p>
-                <a class="buy-link" href="https://pay.sumup.com/b2c/XVG91HPYBZ">Buy Program</a>
+                <img class="resource-image" src="./assets/images/menopause-reset.jpg" alt="60-Second Menopause Reset program" width="1024" height="1536" loading="lazy" />
+                <h3 data-i18n="programMenopause">Menopause Reset</h3>
+                <p data-i18n="programMenopauseText">Ease stress, calm overwhelm and feel balanced again.</p>
+                <a class="buy-link" href="https://pay.sumup.com/b2c/XVG91HPYBZ" target="_blank" rel="noopener noreferrer" data-i18n="buyProgram">Buy Program</a>
               </article>
               <article>
-                <img class="resource-image" src="./assets/images/teen-reset.jpg" alt="" />
-                <h3>Teen Reset</h3>
-                <p>Calm stress, improve focus and help teens feel safe and confident.</p>
-                <a class="buy-link" href="https://pay.sumup.com/b2c/XG1QGXFD9G">Buy Program</a>
+                <img class="resource-image" src="./assets/images/teen-reset.jpg" alt="60-Second Teen Reset program" width="1024" height="1536" loading="lazy" />
+                <h3 data-i18n="programTeen">Teen Reset</h3>
+                <p data-i18n="programTeenText">Calm stress, improve focus and help teens feel safe and confident.</p>
+                <a class="buy-link" href="https://pay.sumup.com/b2c/XG1QGXFD9G" target="_blank" rel="noopener noreferrer" data-i18n="buyProgram">Buy Program</a>
               </article>
             </div>
           </div>
           <aside class="booking-card">
             <div class="booking-card__icon">1:3</div>
-            <h2>Book a Coaching Session</h2>
-            <p>Get personalized coaching or choose a Sleep Reset program purchase link.</p>
-            <a class="button button--outline" href="#programs">Buy Programs</a>
+            <h2 data-i18n="coachingTitle">Book a Coaching Session</h2>
+            <p data-i18n="coachingText">Get personalized coaching or choose a Sleep Reset program purchase link.</p>
+            <a class="button button--outline" href="#programs" data-i18n="buyPrograms">Buy Programs</a>
           </aside>
         </div>
       </section>
 
       <section class="section section--lottery" id="lottery-corner">
         <div class="section-heading section-heading--left">
-          <h2>Lottery Corner</h2>
+          <h2 data-i18n="lotteryTitle">Lottery Corner</h2>
           <span></span>
         </div>
         <div class="lottery-grid">
           <article>
-            <img src="./assets/images/millionaire-for-life.jpg" alt="Millionaire for Life" />
-            <h3>Responsible Play</h3>
-            <p>Learn when and how to play with a clear plan and responsible mindset.</p>
+            <img src="./assets/images/millionaire-for-life.jpg" alt="Millionaire for Life" width="1332" height="784" loading="lazy" />
+            <h3 data-i18n="responsiblePlay">Responsible Play</h3>
+            <p data-i18n="responsiblePlayText">Learn when and how to play with a clear plan and responsible mindset.</p>
           </article>
           <article>
-            <img src="./assets/images/euro-millions.jpg" alt="Euro Millions" />
-            <h3>Euro Millions</h3>
-            <p>Follow practical insights and guidance for informed lottery decisions.</p>
+            <img src="./assets/images/euro-millions.jpg" alt="Euro Millions" width="1600" height="1074" loading="lazy" />
+            <h3 data-i18n="euroMillions">Euro Millions</h3>
+            <p data-i18n="euroMillionsText">Follow practical insights and guidance for informed lottery decisions.</p>
           </article>
           <article>
-            <img src="./assets/images/lottery-fire.jpg" alt="Lottery balls" />
-            <h3>Strategies & Analysis</h3>
-            <p>Explore statistics, mindset coaching, and strategic play education.</p>
+            <img src="./assets/images/lottery-fire.jpg" alt="Lottery balls" width="1600" height="900" loading="lazy" />
+            <h3 data-i18n="strategiesTitle">Strategies & Analysis</h3>
+            <p data-i18n="strategiesText">Explore statistics, mindset coaching, and strategic play education.</p>
           </article>
         </div>
       </section>
 
       <section class="section contact" id="contact">
         <div class="contact__copy">
-          <p class="eyebrow">Get Started</p>
-          <h2>Contact Dennis Consulting Solutions</h2>
-          <p>
-            Send a message to ask about books, coaching, sleep reset programs, marriage counseling,
-            or lottery mindset guidance.
-          </p>
+          <p class="eyebrow" data-i18n="contactEyebrow">Get Started</p>
+          <h2 data-i18n="contactTitle">Contact Dennis Consulting Solutions</h2>
+          <p data-i18n="contactText">Send a message to ask about books, coaching, sleep reset programs, marriage counseling, or lottery mindset guidance.</p>
           <div class="contact-list">
             <a href="mailto:info@dennisconsulting.solutions">info@dennisconsulting.solutions</a>
             <a href="tel:+34631319742">+34 631 319 742</a>
@@ -298,29 +265,20 @@
         </div>
         <form name="landing-contact" method="POST" data-netlify="true">
           <input type="hidden" name="form-name" value="landing-contact" />
+          <label><span data-i18n="formName">Name</span><input name="name" type="text" autocomplete="name" required /></label>
+          <label><span data-i18n="formEmail">Email</span><input name="email" type="email" autocomplete="email" required /></label>
           <label>
-            Name
-            <input name="name" type="text" required />
-          </label>
-          <label>
-            Email
-            <input name="email" type="email" required />
-          </label>
-          <label>
-            Service Needed
+            <span data-i18n="formService">Service Needed</span>
             <select name="service">
-              <option>Book Store</option>
-              <option>Sleep Reset Program</option>
-              <option>Marriage Counseling</option>
-              <option>Lottery Corner</option>
-              <option>Coaching Session</option>
+              <option data-i18n="bookStoreTitle">Book Store</option>
+              <option data-i18n="sleepTitle">Sleep Reset Program</option>
+              <option data-i18n="marriageTitle">Marriage Counseling</option>
+              <option data-i18n="lotteryTitle">Lottery Corner</option>
+              <option data-i18n="coachingSession">Coaching Session</option>
             </select>
           </label>
-          <label>
-            Message
-            <textarea name="message" rows="4"></textarea>
-          </label>
-          <button type="submit">Send Request</button>
+          <label><span data-i18n="formMessage">Message</span><textarea name="message" rows="4"></textarea></label>
+          <button type="submit" data-i18n="sendRequest">Send Request</button>
         </form>
       </section>
     </main>
@@ -328,20 +286,21 @@
     <footer class="footer">
       <div>
         <h2>Dennis Consulting Solutions</h2>
-        <p>Better mind. Better sleep. Better relationships. Better life.</p>
+        <p data-i18n="footerTagline">Better mind. Better sleep. Better relationships. Better life.</p>
       </div>
       <div>
-        <h3>Quick Links</h3>
-        <a href="#book-store">Book Store</a>
-        <a href="#sleep-reset">Sleep Reset Program</a>
-        <a href="#marriage">Marriage Counseling</a>
-        <a href="#lottery-corner">Lottery Corner</a>
+        <h3 data-i18n="quickLinks">Quick Links</h3>
+        <a href="#book-store" data-i18n="bookStoreTitle">Book Store</a>
+        <a href="#sleep-reset" data-i18n="sleepTitle">Sleep Reset Program</a>
+        <a href="#marriage" data-i18n="marriageTitle">Marriage Counseling</a>
+        <a href="#lottery-corner" data-i18n="lotteryTitle">Lottery Corner</a>
       </div>
       <div>
-        <h3>Contact</h3>
+        <h3 data-i18n="navContact">Contact</h3>
         <a href="mailto:info@dennisconsulting.solutions">info@dennisconsulting.solutions</a>
         <a href="tel:+34631319742">+34 631 319 742</a>
       </div>
     </footer>
+    <script type="module" src="./script.js"></script>
   </body>
 </html>
