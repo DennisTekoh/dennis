@@ -542,6 +542,17 @@ button:hover,
   padding: 0;
 }
 
+.resource-grid .buy-link {
+  display: inline-flex;
+  min-height: 42px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  background: var(--gold);
+  color: var(--white);
+  padding: 0 16px;
+}
+
 .booking-card {
   display: grid;
   min-height: 310px;
