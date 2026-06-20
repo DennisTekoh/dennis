@@ -44,7 +44,7 @@ const translations = {
     aboutEyebrow: "About Dennis Agwe",
     aboutTitle: "Author, Coach and Counselor",
     aboutText:
-      "I am an author, coach and counselor with a passion for helping people transform their lives. With years of experience in personal development, sleep science, relationship counseling and mindset coaching, I created programs and services that bring practical solutions to everyday challenges.",
+      "I am an author, coach and counselor with a passion for helping people transform their lives. With years of experience in personal development, sleep science, relationship counseling and mindset coaching, I created programs and services that bring practical solutions to everyday challenges. In addition, I have strong sales and business development experience, helping individuals and organizations identify opportunities, build meaningful relationships, and achieve measurable growth. My ability to connect with people, understand their needs, and provide value-driven solutions has enabled me to succeed in both coaching and sales environments.",
     statAuthor: "Author",
     statAuthorText: "Books Published",
     statCoach: "Coach",
@@ -132,7 +132,7 @@ const translations = {
     aboutEyebrow: "Sobre Dennis Agwe",
     aboutTitle: "Autor, Coach y Consejero",
     aboutText:
-      "Soy autor, coach y consejero con pasion por ayudar a las personas a transformar sus vidas. Con anos de experiencia en desarrollo personal, ciencia del sueno, consejeria de relaciones y coaching de mentalidad, cree programas y servicios que aportan soluciones practicas a retos cotidianos.",
+      "Soy autor, coach y consejero con pasion por ayudar a las personas a transformar sus vidas. Con anos de experiencia en desarrollo personal, ciencia del sueno, consejeria de relaciones y coaching de mentalidad, cree programas y servicios que aportan soluciones practicas a retos cotidianos. Ademas, tengo una fuerte experiencia en ventas y desarrollo de negocio, ayudando a personas y organizaciones a identificar oportunidades, construir relaciones significativas y lograr un crecimiento medible. Mi capacidad para conectar con las personas, entender sus necesidades y ofrecer soluciones basadas en valor me ha permitido tener exito tanto en coaching como en entornos comerciales.",
     statAuthor: "Autor",
     statAuthorText: "Libros Publicados",
     statCoach: "Coach",
@@ -220,7 +220,7 @@ const translations = {
     aboutEyebrow: "A propos de Dennis Agwe",
     aboutTitle: "Auteur, Coach et Conseiller",
     aboutText:
-      "Je suis auteur, coach et conseiller, passionne par l'aide aux personnes qui veulent transformer leur vie. Avec des annees d'experience en developpement personnel, science du sommeil, conseil relationnel et coaching mental, j'ai cree des programmes et services qui apportent des solutions pratiques aux defis quotidiens.",
+      "Je suis auteur, coach et conseiller, passionne par l'aide aux personnes qui veulent transformer leur vie. Avec des annees d'experience en developpement personnel, science du sommeil, conseil relationnel et coaching mental, j'ai cree des programmes et services qui apportent des solutions pratiques aux defis quotidiens. De plus, j'ai une solide experience en vente et developpement commercial, aidant les personnes et les organisations a identifier des opportunites, construire des relations significatives et atteindre une croissance mesurable. Ma capacite a creer du lien, comprendre les besoins et offrir des solutions fondees sur la valeur m'a permis de reussir dans le coaching comme dans les environnements commerciaux.",
     statAuthor: "Auteur",
     statAuthorText: "Livres Publies",
     statCoach: "Coach",
