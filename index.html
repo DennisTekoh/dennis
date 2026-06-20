@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self'; form-action 'self'; base-uri 'self'; frame-ancestors 'none'; upgrade-insecure-requests" />
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://dennisconsultingsolutions.blogspot.com https://www.blogger.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://dennisconsultingsolutions.blogspot.com https://www.blogger.com; form-action 'self'; base-uri 'self'; frame-ancestors 'none'; upgrade-insecure-requests" />
     <meta name="referrer" content="strict-origin-when-cross-origin" />
     <meta name="robots" content="index, follow, max-image-preview:large" />
     <meta name="theme-color" content="#061b2f" />
@@ -248,6 +248,22 @@
             <h3 data-i18n="strategiesTitle">Strategies & Analysis</h3>
             <p data-i18n="strategiesText">Explore statistics, mindset coaching, and strategic play education.</p>
           </article>
+        </div>
+      </section>
+
+      <section class="section section--light blog-preview" id="blog">
+        <div class="section-heading">
+          <h2 data-i18n="latestBlog">Latest from the Blog</h2>
+          <span></span>
+        </div>
+        <div class="blog-grid" id="blog-posts" aria-live="polite">
+          <article class="blog-card blog-card--loading">
+            <h3 data-i18n="blogLoading">Loading latest posts...</h3>
+            <p data-i18n="blogLoadingText">The newest articles from Blogger will appear here automatically.</p>
+          </article>
+        </div>
+        <div class="blog-actions">
+          <a class="button button--gold" href="https://dennisconsultingsolutions.blogspot.com/" target="_blank" rel="noopener noreferrer" data-i18n="visitBlog">Visit Blog</a>
         </div>
       </section>
 

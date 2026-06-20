@@ -75,6 +75,13 @@ const translations = {
     euroMillionsText: "Follow practical insights and guidance for informed lottery decisions.",
     strategiesTitle: "Strategies & Analysis",
     strategiesText: "Explore statistics, mindset coaching, and strategic play education.",
+    latestBlog: "Latest from the Blog",
+    blogLoading: "Loading latest posts...",
+    blogLoadingText: "The newest articles from Blogger will appear here automatically.",
+    blogEmpty: "No blog posts found yet.",
+    blogError: "Latest posts could not load right now.",
+    readPost: "Read Post",
+    visitBlog: "Visit Blog",
     contactEyebrow: "Get Started",
     contactTitle: "Contact Dennis Consulting Solutions",
     contactText:
@@ -164,6 +171,13 @@ const translations = {
     euroMillionsText: "Sigue ideas practicas y orientacion para decisiones informadas sobre loteria.",
     strategiesTitle: "Estrategias y Analisis",
     strategiesText: "Explora estadisticas, coaching de mentalidad y educacion para juego estrategico.",
+    latestBlog: "Ultimas entradas del Blog",
+    blogLoading: "Cargando ultimas entradas...",
+    blogLoadingText: "Los articulos mas recientes de Blogger apareceran aqui automaticamente.",
+    blogEmpty: "Todavia no hay entradas en el blog.",
+    blogError: "Las ultimas entradas no se pudieron cargar ahora.",
+    readPost: "Leer Entrada",
+    visitBlog: "Visitar Blog",
     contactEyebrow: "Empezar",
     contactTitle: "Contactar Dennis Consulting Solutions",
     contactText:
@@ -253,6 +267,13 @@ const translations = {
     euroMillionsText: "Suivez des conseils pratiques pour prendre des decisions informees en loterie.",
     strategiesTitle: "Strategies et Analyse",
     strategiesText: "Explorez les statistiques, le coaching mental et l'education au jeu strategique.",
+    latestBlog: "Derniers articles du Blog",
+    blogLoading: "Chargement des derniers articles...",
+    blogLoadingText: "Les articles les plus recents de Blogger apparaitront ici automatiquement.",
+    blogEmpty: "Aucun article de blog pour le moment.",
+    blogError: "Les derniers articles ne peuvent pas etre charges pour le moment.",
+    readPost: "Lire l'article",
+    visitBlog: "Voir le Blog",
     contactEyebrow: "Commencer",
     contactTitle: "Contacter Dennis Consulting Solutions",
     contactText:
@@ -303,3 +324,111 @@ document.querySelectorAll("[data-lang]").forEach((link) => {
 });
 
 applyLanguage(activeLanguage);
+
+function getDictionary() {
+  return translations[document.documentElement.lang] || translations.en;
+}
+
+function stripHtml(value = "") {
+  const element = document.createElement("div");
+  element.innerHTML = value;
+  return (element.textContent || element.innerText || "").replace(/\s+/g, " ").trim();
+}
+
+function getPostLink(post) {
+  return post.link?.find((link) => link.rel === "alternate")?.href || "https://dennisconsultingsolutions.blogspot.com/";
+}
+
+function getPostImage(post) {
+  const content = post.content?.$t || post.summary?.$t || "";
+  const match = content.match(/<img[^>]+src=["']([^"']+)["']/i);
+  return match?.[1]?.replace(/\/s\d+(-c)?\//, "/s640/") || "";
+}
+
+function formatPostDate(value) {
+  if (!value) return "";
+  const language = document.documentElement.lang || "en";
+  return new Intl.DateTimeFormat(language, {
+    month: "short",
+    day: "numeric",
+    year: "numeric",
+  }).format(new Date(value));
+}
+
+function renderBlogPosts(feedData) {
+  const dictionary = getDictionary();
+  const container = document.getElementById("blog-posts");
+  const posts = feedData?.feed?.entry || [];
+
+  if (!container) return;
+
+  if (!posts.length) {
+    container.innerHTML = `<article class="blog-card"><h3>${dictionary.blogEmpty}</h3></article>`;
+    return;
+  }
+
+  container.innerHTML = posts
+    .slice(0, 3)
+    .map((post) => {
+      const title = stripHtml(post.title?.$t || dictionary.readPost);
+      const summary = stripHtml(post.summary?.$t || post.content?.$t || "").slice(0, 150);
+      const link = getPostLink(post);
+      const image = getPostImage(post);
+      const date = formatPostDate(post.published?.$t);
+      const imageMarkup = image
+        ? `<img src="${image}" alt="" loading="lazy" referrerpolicy="no-referrer" />`
+        : "";
+
+      return `
+        <article class="blog-card">
+          ${imageMarkup}
+          <div class="blog-card__body">
+            ${date ? `<time datetime="${post.published.$t}">${date}</time>` : ""}
+            <h3>${title}</h3>
+            ${summary ? `<p>${summary}${summary.length >= 150 ? "..." : ""}</p>` : ""}
+            <a href="${link}" target="_blank" rel="noopener noreferrer">${dictionary.readPost}</a>
+          </div>
+        </article>
+      `;
+    })
+    .join("");
+}
+
+function showBlogError() {
+  const dictionary = getDictionary();
+  const container = document.getElementById("blog-posts");
+  if (!container) return;
+  container.innerHTML = `
+    <article class="blog-card">
+      <h3>${dictionary.blogError}</h3>
+      <p>${dictionary.blogLoadingText}</p>
+      <a href="https://dennisconsultingsolutions.blogspot.com/" target="_blank" rel="noopener noreferrer">${dictionary.visitBlog}</a>
+    </article>
+  `;
+}
+
+function loadBlogPosts() {
+  const callbackName = `renderDennisBlog${Date.now()}`;
+  const script = document.createElement("script");
+  const feedUrl = new URL("https://dennisconsultingsolutions.blogspot.com/feeds/posts/default");
+  feedUrl.searchParams.set("alt", "json-in-script");
+  feedUrl.searchParams.set("max-results", "3");
+  feedUrl.searchParams.set("callback", callbackName);
+
+  window[callbackName] = (data) => {
+    renderBlogPosts(data);
+    delete window[callbackName];
+    script.remove();
+  };
+
+  script.onerror = () => {
+    showBlogError();
+    delete window[callbackName];
+    script.remove();
+  };
+
+  script.src = feedUrl.toString();
+  document.body.appendChild(script);
+}
+
+loadBlogPosts();
