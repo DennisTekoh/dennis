@@ -281,23 +281,20 @@
             </div>
           </div>
         </div>
-        <form name="landing-contact" method="POST" data-netlify="true">
-          <input type="hidden" name="form-name" value="landing-contact" />
-          <label><span data-i18n="formName">Name</span><input name="name" type="text" autocomplete="name" required /></label>
-          <label><span data-i18n="formEmail">Email</span><input name="email" type="email" autocomplete="email" required /></label>
-          <label>
-            <span data-i18n="formService">Service Needed</span>
-            <select name="service">
-              <option data-i18n="bookStoreTitle">Book Store</option>
-              <option data-i18n="sleepTitle">Sleep Reset Program</option>
-              <option data-i18n="marriageTitle">Marriage Counseling</option>
-              <option data-i18n="lotteryTitle">Lottery Corner</option>
-              <option data-i18n="coachingSession">Coaching Session</option>
-            </select>
-          </label>
-          <label><span data-i18n="formMessage">Message</span><textarea name="message" rows="4"></textarea></label>
-          <button type="submit" data-i18n="sendRequest">Send Request</button>
-        </form>
+        <div class="contact-card">
+          <h3 data-i18n="contactCardTitle">Ready to talk?</h3>
+          <p data-i18n="contactCardText">For the fastest response, email Dennis Consulting Solutions directly or start a WhatsApp conversation.</p>
+          <div class="contact-card__actions">
+            <a class="button button--gold" href="mailto:info@dennisconsulting.solutions?subject=Website%20Inquiry%20-%20Dennis%20Consulting%20Solutions" data-i18n="emailDennis">Email Dennis</a>
+            <a class="button button--green" href="https://wa.me/34631319742" target="_blank" rel="noopener noreferrer" data-i18n="messageWhatsapp">WhatsApp</a>
+          </div>
+          <div class="contact-card__details">
+            <span data-i18n="emailLabel">Email</span>
+            <a href="mailto:info@dennisconsulting.solutions">info@dennisconsulting.solutions</a>
+            <span data-i18n="phoneLabel">Phone</span>
+            <a href="tel:+34631319742">+34 631 319 742</a>
+          </div>
+        </div>
       </section>
     </main>
 
