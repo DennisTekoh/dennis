@@ -19,7 +19,7 @@ const translations = {
     badgeLottery: "Lottery Mindset Coach",
     buyBook: "Buy My Book",
     sleepProgram: "Sleep Reset Program",
-    whatIDo: "What I Do",
+    whatIDo: "What We Do",
     bookStoreTitle: "Book Store",
     bookStoreText1:
       'Get your copy of my book "Kingdom Principles For Proper Living" and start living a purposeful life.',
@@ -42,10 +42,10 @@ const translations = {
       "Mindset coaching, strategies, lottery education, results, statistics and responsible lottery play.",
     lotteryText2:
       "Receive smart guidance on when and how to play responsibly, with practical insights, strategies, and analysis to help you make informed decisions.",
-    aboutEyebrow: "About Dennis Agwe",
-    aboutTitle: "Author, Coach and Counselor",
+    aboutEyebrow: "About Dennis Consulting Solutions",
+    aboutTitle: "Authors, Coaches and Counselors",
     aboutText:
-      "I am an author, coach and counselor with a passion for helping people transform their lives. With years of experience in personal development, sleep science, relationship counseling and mindset coaching, I created programs and services that bring practical solutions to everyday challenges. In addition, I have strong sales and business development experience, helping individuals and organizations identify opportunities, build meaningful relationships, and achieve measurable growth. My ability to connect with people, understand their needs, and provide value-driven solutions has enabled me to succeed in both coaching and sales environments.",
+      "We are authors, coaches and counselors with a passion for helping people transform their lives. With years of experience in personal development, sleep science, relationship counseling and mindset coaching, we created programs and services that bring practical solutions to everyday challenges. In addition, we have strong sales and business development experience, helping individuals and organizations identify opportunities, build meaningful relationships, and achieve measurable growth. Our ability to connect with people, understand their needs, and provide value-driven solutions has enabled us to succeed in both coaching and sales environments.",
     statAuthor: "Author",
     statAuthorText: "Books Published",
     statCoach: "Coach",
@@ -117,7 +117,7 @@ const translations = {
     badgeLottery: "Coach de Mentalidad",
     buyBook: "Comprar Libro",
     sleepProgram: "Programa Sleep Reset",
-    whatIDo: "Lo Que Hago",
+    whatIDo: "Lo Que Hacemos",
     bookStoreTitle: "Libreria",
     bookStoreText1:
       'Consigue mi libro "Kingdom Principles For Proper Living" y comienza a vivir con proposito.',
@@ -140,10 +140,10 @@ const translations = {
       "Coaching de mentalidad, estrategias, educacion sobre loteria, resultados, estadisticas y juego responsable.",
     lotteryText2:
       "Recibe guia inteligente sobre cuando y como jugar responsablemente, con ideas practicas, estrategias y analisis para tomar decisiones informadas.",
-    aboutEyebrow: "Sobre Dennis Agwe",
-    aboutTitle: "Autor, Coach y Consejero",
+    aboutEyebrow: "Sobre Dennis Consulting Solutions",
+    aboutTitle: "Autores, Coaches y Consejeros",
     aboutText:
-      "Soy autor, coach y consejero con pasion por ayudar a las personas a transformar sus vidas. Con anos de experiencia en desarrollo personal, ciencia del sueno, consejeria de relaciones y coaching de mentalidad, cree programas y servicios que aportan soluciones practicas a retos cotidianos. Ademas, tengo una fuerte experiencia en ventas y desarrollo de negocio, ayudando a personas y organizaciones a identificar oportunidades, construir relaciones significativas y lograr un crecimiento medible. Mi capacidad para conectar con las personas, entender sus necesidades y ofrecer soluciones basadas en valor me ha permitido tener exito tanto en coaching como en entornos comerciales.",
+      "Somos autores, coaches y consejeros con pasion por ayudar a las personas a transformar sus vidas. Con anos de experiencia en desarrollo personal, ciencia del sueno, consejeria de relaciones y coaching de mentalidad, creamos programas y servicios que aportan soluciones practicas a retos cotidianos. Ademas, tenemos una fuerte experiencia en ventas y desarrollo de negocio, ayudando a personas y organizaciones a identificar oportunidades, construir relaciones significativas y lograr un crecimiento medible. Nuestra capacidad para conectar con las personas, entender sus necesidades y ofrecer soluciones basadas en valor nos ha permitido tener exito tanto en coaching como en entornos comerciales.",
     statAuthor: "Autor",
     statAuthorText: "Libros Publicados",
     statCoach: "Coach",
@@ -215,7 +215,7 @@ const translations = {
     badgeLottery: "Coach Mentalite Loterie",
     buyBook: "Acheter le Livre",
     sleepProgram: "Programme Sleep Reset",
-    whatIDo: "Ce Que Je Fais",
+    whatIDo: "Ce Que Nous Faisons",
     bookStoreTitle: "Librairie",
     bookStoreText1:
       'Obtenez mon livre "Kingdom Principles For Proper Living" et commencez a vivre avec objectif.',
@@ -238,10 +238,10 @@ const translations = {
       "Coaching mental, strategies, education loterie, resultats, statistiques et jeu responsable.",
     lotteryText2:
       "Recevez des conseils intelligents pour savoir quand et comment jouer de facon responsable, avec des idees pratiques, des strategies et des analyses.",
-    aboutEyebrow: "A propos de Dennis Agwe",
-    aboutTitle: "Auteur, Coach et Conseiller",
+    aboutEyebrow: "A propos de Dennis Consulting Solutions",
+    aboutTitle: "Auteurs, Coachs et Conseillers",
     aboutText:
-      "Je suis auteur, coach et conseiller, passionne par l'aide aux personnes qui veulent transformer leur vie. Avec des annees d'experience en developpement personnel, science du sommeil, conseil relationnel et coaching mental, j'ai cree des programmes et services qui apportent des solutions pratiques aux defis quotidiens. De plus, j'ai une solide experience en vente et developpement commercial, aidant les personnes et les organisations a identifier des opportunites, construire des relations significatives et atteindre une croissance mesurable. Ma capacite a creer du lien, comprendre les besoins et offrir des solutions fondees sur la valeur m'a permis de reussir dans le coaching comme dans les environnements commerciaux.",
+      "Nous sommes auteurs, coachs et conseillers, passionnes par l'aide aux personnes qui veulent transformer leur vie. Avec des annees d'experience en developpement personnel, science du sommeil, conseil relationnel et coaching mental, nous avons cree des programmes et services qui apportent des solutions pratiques aux defis quotidiens. De plus, nous avons une solide experience en vente et developpement commercial, aidant les personnes et les organisations a identifier des opportunites, construire des relations significatives et atteindre une croissance mesurable. Notre capacite a creer du lien, comprendre les besoins et offrir des solutions fondees sur la valeur nous a permis de reussir dans le coaching comme dans les environnements commerciaux.",
     statAuthor: "Auteur",
     statAuthorText: "Livres Publies",
     statCoach: "Coach",

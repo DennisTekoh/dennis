@@ -448,11 +448,6 @@ button:hover,
   color: var(--white);
 }
 
-.about--text-only {
-  grid-template-columns: minmax(0, 980px);
-  justify-content: center;
-}
-
 .about__photo {
   min-height: 430px;
   overflow: hidden;
@@ -470,10 +465,6 @@ button:hover,
   padding: 64px 7vw 64px 56px;
 }
 
-.about--text-only .about__content {
-  padding: 76px 7vw;
-}
-
 .about__content h2 {
   margin-bottom: 18px;
 }
@@ -482,10 +473,6 @@ button:hover,
   max-width: 720px;
   color: rgba(255, 255, 255, 0.84);
   line-height: 1.66;
-}
-
-.about--text-only .about__content p {
-  max-width: 920px;
 }
 
 .stats {
