@@ -89,6 +89,7 @@ const translations = {
     contactCardTitle: "Ready to talk?",
     contactCardText:
       "For the fastest response, email Dennis Consulting Solutions directly or start a WhatsApp conversation.",
+    contactUs: "Contact Us",
     emailDennis: "Email Dennis",
     messageWhatsapp: "WhatsApp",
     emailLabel: "Email",
@@ -187,6 +188,7 @@ const translations = {
     contactCardTitle: "Listo para hablar?",
     contactCardText:
       "Para una respuesta mas rapida, escribe directamente a Dennis Consulting Solutions por email o inicia una conversacion por WhatsApp.",
+    contactUs: "Contactar",
     emailDennis: "Enviar Email",
     messageWhatsapp: "WhatsApp",
     emailLabel: "Email",
@@ -285,6 +287,7 @@ const translations = {
     contactCardTitle: "Pret a discuter?",
     contactCardText:
       "Pour une reponse rapide, envoyez un email directement a Dennis Consulting Solutions ou commencez une conversation WhatsApp.",
+    contactUs: "Contactez-nous",
     emailDennis: "Envoyer Email",
     messageWhatsapp: "WhatsApp",
     emailLabel: "Email",
