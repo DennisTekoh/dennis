@@ -34,7 +34,16 @@ Use this folder as the site root.
 - Build command: `npm run build`
 - Publish directory: `dist`
 
-The contact form is configured with Netlify Forms using the form name `landing-contact`.
+The contact form is handled by `netlify/functions/contact.cjs` and Resend.
+
+## Contact form with Resend
+
+The contact form sends email through a Netlify Function and Resend. Add these environment
+variables in Netlify:
+
+- `RESEND_API_KEY` - Resend API key.
+- `CONTACT_TO_EMAIL` - destination inbox, usually `info@dennisconsulting.solutions`.
+- `CONTACT_FROM_EMAIL` - verified sender, for example `Dennis Consulting Solutions <noreply@dennisconsulting.solutions>`.
 
 ## Local development
 

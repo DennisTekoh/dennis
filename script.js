@@ -88,13 +88,21 @@ const translations = {
       "Send a message to ask about books, coaching, sleep reset programs, marriage counseling, or lottery mindset guidance.",
     contactCardTitle: "Ready to talk?",
     contactCardText:
-      "For the fastest response, email Dennis Consulting Solutions directly or start a WhatsApp conversation.",
+      "Send your message and Dennis Consulting Solutions will reply by email.",
     contactUs: "Contact Us",
     emailDennis: "Email Dennis",
     messageWhatsapp: "WhatsApp",
     emailLabel: "Email",
     phoneLabel: "Phone",
+    formName: "Name",
+    formEmail: "Email",
+    formService: "Service Needed",
     coachingSession: "Coaching Session",
+    formMessage: "Message",
+    sendMessage: "Send Message",
+    sendingMessage: "Sending...",
+    messageSent: "Thank you. Your message has been sent.",
+    messageError: "Sorry, your message could not be sent. Please email us directly.",
     footerTagline: "Better mind. Better sleep. Better relationships. Better life.",
     quickLinks: "Quick Links",
   },
@@ -187,13 +195,21 @@ const translations = {
       "Envia un mensaje para preguntar sobre libros, coaching, programas Sleep Reset, consejeria matrimonial o guia de mentalidad para loteria.",
     contactCardTitle: "Listo para hablar?",
     contactCardText:
-      "Para una respuesta mas rapida, escribe directamente a Dennis Consulting Solutions por email o inicia una conversacion por WhatsApp.",
+      "Envia tu mensaje y Dennis Consulting Solutions respondera por email.",
     contactUs: "Contactar",
     emailDennis: "Enviar Email",
     messageWhatsapp: "WhatsApp",
     emailLabel: "Email",
     phoneLabel: "Telefono",
+    formName: "Nombre",
+    formEmail: "Email",
+    formService: "Servicio Necesario",
     coachingSession: "Sesion de Coaching",
+    formMessage: "Mensaje",
+    sendMessage: "Enviar Mensaje",
+    sendingMessage: "Enviando...",
+    messageSent: "Gracias. Tu mensaje ha sido enviado.",
+    messageError: "Lo sentimos, tu mensaje no se pudo enviar. Por favor escribe directamente por email.",
     footerTagline: "Mejor mente. Mejor sueno. Mejores relaciones. Mejor vida.",
     quickLinks: "Enlaces Rapidos",
   },
@@ -286,13 +302,21 @@ const translations = {
       "Envoyez un message pour demander des informations sur les livres, le coaching, les programmes Sleep Reset, le conseil matrimonial ou la mentalite loterie.",
     contactCardTitle: "Pret a discuter?",
     contactCardText:
-      "Pour une reponse rapide, envoyez un email directement a Dennis Consulting Solutions ou commencez une conversation WhatsApp.",
+      "Envoyez votre message et Dennis Consulting Solutions repondra par email.",
     contactUs: "Contactez-nous",
     emailDennis: "Envoyer Email",
     messageWhatsapp: "WhatsApp",
     emailLabel: "Email",
     phoneLabel: "Telephone",
+    formName: "Nom",
+    formEmail: "Email",
+    formService: "Service Souhaite",
     coachingSession: "Session de Coaching",
+    formMessage: "Message",
+    sendMessage: "Envoyer Message",
+    sendingMessage: "Envoi...",
+    messageSent: "Merci. Votre message a ete envoye.",
+    messageError: "Desole, votre message n'a pas pu etre envoye. Veuillez nous envoyer un email directement.",
     footerTagline: "Meilleur esprit. Meilleur sommeil. Meilleures relations. Meilleure vie.",
     quickLinks: "Liens Rapides",
   },
@@ -333,6 +357,47 @@ document.querySelectorAll("[data-lang]").forEach((link) => {
 });
 
 applyLanguage(activeLanguage);
+
+function setupContactForm() {
+  const form = document.getElementById("contact-form");
+  const status = document.getElementById("form-status");
+  if (!form || !status) return;
+
+  form.addEventListener("submit", async (event) => {
+    event.preventDefault();
+    const dictionary = getDictionary();
+    const submitButton = form.querySelector("button[type='submit']");
+    const formData = new FormData(form);
+    const payload = Object.fromEntries(formData.entries());
+
+    status.textContent = dictionary.sendingMessage;
+    status.dataset.state = "loading";
+    submitButton.disabled = true;
+
+    try {
+      const response = await fetch("/.netlify/functions/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(payload),
+      });
+
+      if (!response.ok) {
+        throw new Error("Message failed");
+      }
+
+      form.reset();
+      status.textContent = dictionary.messageSent;
+      status.dataset.state = "success";
+    } catch {
+      status.textContent = dictionary.messageError;
+      status.dataset.state = "error";
+    } finally {
+      submitButton.disabled = false;
+    }
+  });
+}
 
 function getDictionary() {
   return translations[document.documentElement.lang] || translations.en;
@@ -441,3 +506,4 @@ function loadBlogPosts() {
 }
 
 loadBlogPosts();
+setupContactForm();
