@@ -43,7 +43,7 @@ variables in Netlify:
 
 - `RESEND_API_KEY` - Resend API key.
 - `CONTACT_TO_EMAIL` - destination inbox, usually `info@dennisconsulting.solutions`.
-- `CONTACT_FROM_EMAIL` - verified sender, for example `Dennis Consulting Solutions <noreply@dennisconsulting.solutions>`.
+- `CONTACT_FROM_EMAIL` - verified sender, for example `Dennis Consulting Solutions <info@dennisconsulting.solutions>`.
 
 ## Local development
 

@@ -1,7 +1,7 @@
 const RESEND_ENDPOINT = "https://api.resend.com/emails";
 const TO_EMAIL = process.env.CONTACT_TO_EMAIL || "info@dennisconsulting.solutions";
 const FROM_EMAIL =
-  process.env.CONTACT_FROM_EMAIL || "Dennis Consulting Solutions <noreply@dennisconsulting.solutions>";
+  process.env.CONTACT_FROM_EMAIL || "Dennis Consulting Solutions <info@dennisconsulting.solutions>";
 
 function json(statusCode, body) {
   return {
